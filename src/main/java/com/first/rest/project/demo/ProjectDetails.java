@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Entity()
+@Entity
 @Table(name = "ProjectDetails")
 public class ProjectDetails {
 

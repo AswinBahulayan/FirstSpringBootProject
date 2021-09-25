@@ -1,4 +1,4 @@
-package com.first.rest.project.demo;
+package com.rest.service;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

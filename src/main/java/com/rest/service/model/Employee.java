@@ -1,22 +1,43 @@
-package com.first.rest.project.demo;
+package com.rest.service.model;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 //@Table(name = "employeeData")
-public class Employeedata {
+public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
-	String firstname;
-	String lastname;
-	String company;
+	private int id;
+	private String firstname;
+	private String lastname;
+	private String company;
+	
+	@ManyToOne
+	@JoinColumn(name = "project_id",nullable = false)
+	private Projects project;
 
-	public Employeedata() {
+	public Projects getProject() {
+		return project;
+	}
+
+	public void setProject(Projects project) {
+		this.project = project;
+	}
+
+	public Employee() {
 
 	}
 

@@ -1,4 +1,4 @@
- package com.first.rest.project.demo;
+ package com.rest.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
